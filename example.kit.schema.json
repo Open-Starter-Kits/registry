@@ -1,0 +1,21 @@
+{
+  "name": "Next.js SaaS Starter",
+  "slug": "nextjs-saas-starter",
+  "repo": "https://github.com/dev-starter-kits/nextjs-saas-starter",
+  "type": "saas",
+  "stack": {
+    "language": ["typescript"],
+    "frontend": ["nextjs", "react", "tailwind"],
+    "backend": ["node"],
+    "database": ["postgres"],
+    "infrastructure": ["vercel"]
+  },
+  "features": ["auth", "stripe", "subscriptions", "rbac"],
+  "difficulty": "intermediate",
+  "status": "active",
+  "license": "MIT",
+  "maintainers": ["your-github-username"],
+  "created_at": "2026-01-15",
+  "last_updated": "2026-01-15",
+  "description": "Production-ready Next.js SaaS starter with auth, billing, and subscriptions."
+}
