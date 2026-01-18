@@ -1,0 +1,50 @@
+{
+    "name": "FastAPI REST API Starter",
+    "slug": "fastapi-api-starter",
+    "repo": "https://github.com/your-org/fastapi-api-starter",
+    "type": "api",
+    "stack": {
+        "language": [
+            "python"
+        ],
+        "backend": [
+            "fastapi",
+            "uvicorn"
+        ],
+        "database": [
+            "postgres"
+        ],
+        "infrastructure": [
+            "docker",
+            "postgresql"
+        ]
+    },
+    "features": [
+        "jwt authentication",
+        "api versioning",
+        "swagger docs",
+        "rate limiting",
+        "caching"
+    ],
+    "difficulty": "intermediate",
+    "status": "active",
+    "license": "MIT",
+    "maintainers": [
+        "your-github-username"
+    ],
+    "created_at": "2026-01-18",
+    "last_updated": "2026-01-18",
+    "description": "FastAPI starter kit with JWT auth, API versioning, swagger documentation, and caching.",
+    "homepage": "https://fastapi-api-starter.example.com",
+    "tags": [
+        "api",
+        "fastapi",
+        "python",
+        "jwt",
+        "postgres"
+    ],
+    "requirements": {
+        "python": ">=3.11",
+        "docker": true
+    }
+}

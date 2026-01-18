@@ -1,0 +1,51 @@
+{
+    "name": "Expo React Native Mobile Starter",
+    "slug": "expo-mobile-starter",
+    "repo": "https://github.com/your-org/expo-mobile-starter",
+    "type": "mobile",
+    "stack": {
+        "language": [
+            "javascript"
+        ],
+        "frontend": [
+            "react-native",
+            "expo"
+        ],
+        "backend": [
+            "firebase"
+        ],
+        "infrastructure": [
+            "expo",
+            "firebase"
+        ]
+    },
+    "features": [
+        "authentication",
+        "push notifications",
+        "offline support",
+        "analytics",
+        "in-app purchases"
+    ],
+    "difficulty": "beginner",
+    "status": "active",
+    "license": "MIT",
+    "maintainers": [
+        "your-github-username"
+    ],
+    "created_at": "2026-01-18",
+    "last_updated": "2026-01-18",
+    "description": "Mobile app starter using Expo and Firebase with auth, push notifications, and offline support.",
+    "homepage": "https://expo-mobile-starter.example.com",
+    "tags": [
+        "mobile",
+        "react-native",
+        "expo",
+        "firebase",
+        "push-notifications",
+        "auth"
+    ],
+    "requirements": {
+        "node": ">=18",
+        "docker": false
+    }
+}

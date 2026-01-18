@@ -1,0 +1,55 @@
+{
+    "name": "Next.js SaaS Starter",
+    "slug": "nextjs-saas-starter",
+    "repo": "https://github.com/your-org/nextjs-saas-starter",
+    "type": "saas",
+    "stack": {
+        "language": [
+            "typescript"
+        ],
+        "frontend": [
+            "nextjs",
+            "react",
+            "tailwind"
+        ],
+        "backend": [
+            "node",
+            "express"
+        ],
+        "database": [
+            "postgres"
+        ],
+        "infrastructure": [
+            "vercel",
+            "docker"
+        ]
+    },
+    "features": [
+        "authentication",
+        "stripe payments",
+        "subscriptions",
+        "rbac",
+        "email notifications"
+    ],
+    "difficulty": "intermediate",
+    "status": "active",
+    "license": "MIT",
+    "maintainers": [
+        "your-github-username"
+    ],
+    "created_at": "2026-01-18",
+    "last_updated": "2026-01-18",
+    "description": "Production-ready Next.js SaaS starter with auth, billing, RBAC, and email notifications.",
+    "homepage": "https://nextjs-saas-starter.example.com",
+    "tags": [
+        "saas",
+        "nextjs",
+        "stripe",
+        "auth",
+        "rbac"
+    ],
+    "requirements": {
+        "node": ">=18",
+        "docker": true
+    }
+}
