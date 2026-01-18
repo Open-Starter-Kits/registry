@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dev Starter Kit Metadata Schema",
+  "type": "object",
+  "required": [
+    "name",
+    "slug",
+    "repo",
+    "type",
+    "stack",
+    "features",
+    "difficulty",
+    "status",
+    "license",
+    "maintainers",
+    "created_at",
+    "last_updated"
+  ],
+  "additionalProperties": false,
+
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the starter kit"
+    },
+
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "URL-safe unique identifier"
+    },
+
+    "repo": {
+      "type": "string",
+      "format": "uri",
+      "description": "GitHub repository URL under the dev-starter-kits organization"
+    },
+
+    "type": {
+      "type": "string",
+      "enum": [
+        "saas",
+        "marketplace",
+        "api",
+        "dashboard",
+        "mobile",
+        "cli",
+        "ai",
+        "blockchain"
+      ],
+      "description": "Primary problem domain this kit solves"
+    },
+
+    "stack": {
+      "type": "object",
+      "required": ["language"],
+      "additionalProperties": false,
+      "properties": {
+        "language": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "frontend": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "backend": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "database": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "infrastructure": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "features": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "description": "List of integrated features (auth, payments, rbac, etc.)"
+    },
+
+    "difficulty": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"]
+    },
+
+    "status": {
+      "type": "string",
+      "enum": [
+        "experimental",
+        "active",
+        "deprecated",
+        "unmaintained"
+      ]
+    },
+
+    "license": {
+      "type": "string",
+      "description": "Open-source license identifier (MIT, Apache-2.0, GPL-3.0, etc.)"
+    },
+
+    "maintainers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "description": "GitHub usernames of maintainers"
+      }
+    },
+
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+
+    "last_updated": {
+      "type": "string",
+      "format": "date"
+    },
+
+    "description": {
+      "type": "string",
+      "maxLength": 280,
+      "description": "Short description used for listing and previews"
+    },
+
+    "homepage": {
+      "type": "string",
+      "format": "uri",
+      "description": "Optional homepage or documentation URL"
+    },
+
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Search and discovery tags"
+    },
+
+    "requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "node": { "type": "string" },
+        "python": { "type": "string" },
+        "docker": { "type": "boolean" }
+      },
+      "description": "Minimum runtime requirements"
+    }
+  }
+}
