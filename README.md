@@ -1,11 +1,11 @@
-# Dev Starter Kits Registry
+# Open Starter Kits Registry
 
-Welcome to **Dev Starter Kits** — the largest open-source registry of production-ready starter kits for developers.  
+Welcome to **Open Starter Kits** — the largest open-source registry of production-ready starter kits for developers.  
 Our goal is to save developers time by providing **ready-to-use, fully integrated project templates** across multiple tech stacks and domains.
 
 ---
 
-## Why Dev Starter Kits?
+## Why Open Starter Kits?
 
 Starting a new project can be time-consuming:
 
@@ -13,7 +13,7 @@ Starting a new project can be time-consuming:
 - Configuring project structure and CI/CD
 - Choosing the right stack and conventions
 
-**Dev Starter Kits** solves this by providing:
+**Open Starter Kits** solves this by providing:
 
 - Production-ready starter templates
 - Pre-integrated common features (auth, payments, subscriptions, RBAC, email, etc.)

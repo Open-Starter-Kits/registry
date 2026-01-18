@@ -1,6 +1,6 @@
-# Dev Starter Kits Governance
+# Open Starter Kits Governance
 
-This document defines how the Dev Starter Kits ecosystem is governed, ensuring quality, sustainability, and clarity.
+This document defines how the Open Starter Kits ecosystem is governed, ensuring quality, sustainability, and clarity.
 
 ---
 

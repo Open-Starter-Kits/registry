@@ -1,6 +1,6 @@
-# Contributing to Dev Starter Kits Registry
+# Contributing to Open Starter Kits Registry
 
-Thank you for your interest in contributing to Dev Starter Kits!  
+Thank you for your interest in contributing to Open Starter Kits!  
 This project maintains a **high-quality registry of production-ready starter kits**. Please read this document carefully before submitting a contribution.
 
 ---
@@ -21,7 +21,7 @@ A starter kit **must**:
 
 - Be production-ready and fully functional (not a demo or tutorial)
 - Include clear setup and usage instructions
-- Be hosted under the Dev Starter Kits GitHub organization
+- Be hosted under the Open Starter Kits GitHub organization
 - Have at least one active maintainer
 
 Low-effort, incomplete, or broken kits **will be rejected**.
