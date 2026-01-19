@@ -40,7 +40,6 @@ registry/
 ├── .github/        # GitHub workflows
 │   └── workflows/
 │       ├── validate-pr.yml
-│       └── generate-index.yml
 ├── index.json      # Generated index of all kits
 ├── CONTRIBUTING.md # How to contribute
 ├── GOVERNANCE.md   # Governance rules
@@ -101,10 +100,9 @@ This creates a comprehensive index containing:
 
 ### Automated Workflows
 
-- **PR Validation** (`validate-pr.yml`): Runs on every pull request to validate changed kit files
-- **Index Generation** (`generate-index.yml`): Automatically regenerates `index.json` when kits are merged to main
+- **PR Validation** (`validate-pr.yml`): Runs on every pull request to validate all kit metadata files
 
-The index is committed back to the repository automatically on merge.
+All PRs must pass validation before they can be merged.
 
 ---
 

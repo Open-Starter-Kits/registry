@@ -102,8 +102,7 @@ node scripts/validate.js
 
 ### CI/CD Workflow
 
-- **On PR creation/open**: The `validate-pr.yml` workflow runs automatically to validate all changed kit files
-- **On PR merge**: The `generate-index.yml` workflow validates all kits and regenerates `index.json`
+- **On PR creation/open**: The `validate-pr.yml` workflow runs automatically to validate all kit metadata files
 
 If validation fails, the PR cannot be merged. Fix any errors and push again.
 
