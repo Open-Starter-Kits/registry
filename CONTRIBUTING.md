@@ -84,6 +84,28 @@ All PRs are automatically checked for:
 - Required fields
 - Naming conventions
 - Repository accessibility
+- Unique slugs across all kits
+- Proper directory structure
+- Valid date and URL formats
+
+### Pre-submission Validation
+
+Before submitting your PR, run the validation locally:
+
+```bash
+# Validate your kit file
+node scripts/validate.js kits/<type>/<your-kit-slug>.json
+
+# Validate all kits to check for slug conflicts
+node scripts/validate.js
+```
+
+### CI/CD Workflow
+
+- **On PR creation/open**: The `validate-pr.yml` workflow runs automatically to validate all changed kit files
+- **On PR merge**: The `generate-index.yml` workflow validates all kits and regenerates `index.json`
+
+If validation fails, the PR cannot be merged. Fix any errors and push again.
 
 Core maintainers may request changes or reject submissions.
 

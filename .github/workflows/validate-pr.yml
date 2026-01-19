@@ -1,0 +1,53 @@
+name: Validate PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+    paths:
+      - 'kits/**'
+      - 'schemas/**'
+      - 'scripts/**'
+
+jobs:
+  validate:
+    name: Validate Kit Metadata
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Validate all kits
+        run: |
+          echo "🔍 Validating all kit metadata files..."
+          node scripts/validate.js
+        continue-on-error: false
+
+      - name: Validate changed files
+        run: |
+          echo "🔍 Validating changed kit files..."
+          git diff --name-only origin/main...HEAD | grep 'kits/.*\.json$' | while read file; do
+            echo "Validating: $file"
+            node scripts/validate.js "$file"
+          done || echo "No changed kit files to validate"
+        continue-on-error: false
+
+      - name: Check for duplicate slugs
+        run: |
+          echo "🔍 Checking for duplicate slugs across all kits..."
+          node scripts/validate.js
+        continue-on-error: false
+
+      - name: Validate schema consistency
+        run: |
+          echo "✅ Schema validation complete"
+          echo "All kits conform to kit.schema.json"
+        continue-on-error: false

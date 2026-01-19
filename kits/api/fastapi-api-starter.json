@@ -1,5 +1,6 @@
 {
     "name": "FastAPI REST API Starter",
+    "creator": "DaniyalFaraz2003",
     "slug": "fastapi-api-starter",
     "repo": "https://github.com/your-org/fastapi-api-starter",
     "type": "api",

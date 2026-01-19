@@ -4,8 +4,8 @@
   "type": "object",
   "required": [
     "name",
-    "creator",
     "slug",
+    "creator",
     "repo",
     "type",
     "stack",
@@ -18,11 +18,11 @@
     "last_updated"
   ],
   "additionalProperties": false,
-  "creator": {
-    "type": "string",
-    "description": "GitHub username of the kit creator"
-  },
   "properties": {
+    "creator": {
+      "type": "string",
+      "description": "GitHub username of the kit creator"
+    },
     "name": {
       "type": "string",
       "description": "Human-readable name of the starter kit"

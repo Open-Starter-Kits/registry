@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-01-19",
+  "total_kits": 3,
+  "categories": {
+    "api": 1,
+    "mobile": 1,
+    "saas": 1
+  },
+  "difficulty": {
+    "intermediate": 2,
+    "beginner": 1
+  },
+  "status": {
+    "active": 3
+  },
+  "tags": [
+    "api",
+    "auth",
+    "expo",
+    "fastapi",
+    "firebase",
+    "jwt",
+    "mobile",
+    "nextjs",
+    "postgres",
+    "push-notifications",
+    "python",
+    "rbac",
+    "react-native",
+    "saas",
+    "stripe"
+  ],
+  "stacks": {
+    "languages": {
+      "python": 1,
+      "javascript": 1,
+      "typescript": 1
+    },
+    "frontends": {
+      "react-native": 1,
+      "expo": 1,
+      "nextjs": 1,
+      "react": 1,
+      "tailwind": 1
+    },
+    "backends": {
+      "fastapi": 1,
+      "uvicorn": 1,
+      "firebase": 1,
+      "node": 1,
+      "express": 1
+    },
+    "databases": {
+      "postgres": 2
+    },
+    "infrastructures": {
+      "docker": 2,
+      "postgresql": 1,
+      "expo": 1,
+      "firebase": 1,
+      "vercel": 1
+    }
+  },
+  "kits": [
+    {
+      "name": "FastAPI REST API Starter",
+      "slug": "fastapi-api-starter",
+      "type": "api",
+      "repo": "https://github.com/your-org/fastapi-api-starter",
+      "description": "FastAPI starter kit with JWT auth, API versioning, swagger documentation, and caching.",
+      "tags": [
+        "api",
+        "fastapi",
+        "python",
+        "jwt",
+        "postgres"
+      ],
+      "difficulty": "intermediate",
+      "status": "active",
+      "maintainers": [
+        "your-github-username"
+      ],
+      "last_updated": "2026-01-18"
+    },
+    {
+      "name": "Expo React Native Mobile Starter",
+      "slug": "expo-mobile-starter",
+      "type": "mobile",
+      "repo": "https://github.com/your-org/expo-mobile-starter",
+      "description": "Mobile app starter using Expo and Firebase with auth, push notifications, and offline support.",
+      "tags": [
+        "mobile",
+        "react-native",
+        "expo",
+        "firebase",
+        "push-notifications",
+        "auth"
+      ],
+      "difficulty": "beginner",
+      "status": "active",
+      "maintainers": [
+        "your-github-username"
+      ],
+      "last_updated": "2026-01-18"
+    },
+    {
+      "name": "Next.js SaaS Starter",
+      "slug": "nextjs-saas-starter",
+      "type": "saas",
+      "repo": "https://github.com/your-org/nextjs-saas-starter",
+      "description": "Production-ready Next.js SaaS starter with auth, billing, RBAC, and email notifications.",
+      "tags": [
+        "saas",
+        "nextjs",
+        "stripe",
+        "auth",
+        "rbac"
+      ],
+      "difficulty": "intermediate",
+      "status": "active",
+      "maintainers": [
+        "your-github-username"
+      ],
+      "last_updated": "2026-01-18"
+    }
+  ]
+}

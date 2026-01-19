@@ -1,0 +1,78 @@
+name: Generate Index
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'kits/**'
+      - 'scripts/**'
+
+jobs:
+  generate-index:
+    name: Generate Kit Index
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Validate before generating
+        run: |
+          echo "🔍 Validating all kits before index generation..."
+          node scripts/validate.js
+        continue-on-error: false
+
+      - name: Generate index
+        run: |
+          echo "📊 Generating kit index..."
+          node scripts/generate-index.js
+        continue-on-error: false
+
+      - name: Commit and push index.json
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          # Check if index.json was modified
+          if git diff --quiet index.json; then
+            echo "ℹ️  index.json is up to date, no changes needed"
+          else
+            echo "📝 Committing updated index.json"
+            git add index.json
+            git commit -m "chore: update kit index [skip ci]" || exit 0
+            git push
+            echo "✅ Index updated and pushed to main branch"
+          fi
+
+      - name: Upload index artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kit-index
+          path: index.json
+          retention-days: 30
+
+      - name: Display index summary
+        run: |
+          echo "═══════════════════════════════════════"
+          echo "📊 Kit Index Summary"
+          echo "═══════════════════════════════════════"
+          node -e "
+            const index = require('./index.json');
+            console.log('Total Kits:', index.total_kits);
+            console.log('Categories:', Object.entries(index.categories).map(([k,v]) => \`\${k}: \${v}\`).join(', '));
+            console.log('Tags:', index.tags.length);
+            console.log('Generated At:', index.generated_at);
+          "
+          echo "═══════════════════════════════════════"
