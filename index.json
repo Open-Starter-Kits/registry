@@ -1,42 +1,52 @@
 {
-  "generated_at": "2026-01-19",
-  "total_kits": 3,
+  "generated_at": "2026-01-21",
+  "total_kits": 4,
   "categories": {
+    "ai": 1,
     "api": 1,
     "mobile": 1,
     "saas": 1
   },
   "difficulty": {
-    "intermediate": 2,
+    "intermediate": 3,
     "beginner": 1
   },
   "status": {
-    "active": 3
+    "active": 4
   },
   "tags": [
+    "ai",
     "api",
     "auth",
+    "chatbot",
     "expo",
     "fastapi",
     "firebase",
     "jwt",
+    "llm",
+    "local-llm",
     "mobile",
     "nextjs",
+    "openai",
     "postgres",
+    "prompt-engineering",
     "push-notifications",
     "python",
     "rbac",
     "react-native",
     "saas",
-    "stripe"
+    "streamlit",
+    "stripe",
+    "testing"
   ],
   "stacks": {
     "languages": {
-      "python": 1,
+      "python": 2,
       "javascript": 1,
       "typescript": 1
     },
     "frontends": {
+      "streamlit": 1,
       "react-native": 1,
       "expo": 1,
       "nextjs": 1,
@@ -44,6 +54,7 @@
       "tailwind": 1
     },
     "backends": {
+      "langchain": 1,
       "fastapi": 1,
       "uvicorn": 1,
       "firebase": 1,
@@ -54,7 +65,8 @@
       "postgres": 2
     },
     "infrastructures": {
-      "docker": 2,
+      "docker": 3,
+      "uv": 1,
       "postgresql": 1,
       "expo": 1,
       "firebase": 1,
@@ -63,10 +75,33 @@
   },
   "kits": [
     {
+      "name": "Streamlit LLM Testing Playground",
+      "slug": "streamlit-llm-testing-playground",
+      "type": "ai",
+      "repo": "https://github.com/Open-Starter-Kits/streamlit-llm-testing-playground",
+      "description": "A Streamlit-based playground for testing, comparing, and debugging LLMs via API or local models using a clean chatbot interface.",
+      "tags": [
+        "ai",
+        "llm",
+        "streamlit",
+        "chatbot",
+        "prompt-engineering",
+        "openai",
+        "local-llm",
+        "testing"
+      ],
+      "difficulty": "intermediate",
+      "status": "active",
+      "maintainers": [
+        "DaniyalFaraz2003"
+      ],
+      "last_updated": "2026-01-21"
+    },
+    {
       "name": "FastAPI REST API Starter",
       "slug": "fastapi-api-starter",
       "type": "api",
-      "repo": "https://github.com/your-org/fastapi-api-starter",
+      "repo": "https://github.com/Open-Starter-Kits/fastapi-api-starter",
       "description": "FastAPI starter kit with JWT auth, API versioning, swagger documentation, and caching.",
       "tags": [
         "api",
@@ -78,9 +113,9 @@
       "difficulty": "intermediate",
       "status": "active",
       "maintainers": [
-        "your-github-username"
+        "DaniyalFaraz2003"
       ],
-      "last_updated": "2026-01-18"
+      "last_updated": "2026-01-20"
     },
     {
       "name": "Expo React Native Mobile Starter",

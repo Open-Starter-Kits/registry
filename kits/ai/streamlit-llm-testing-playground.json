@@ -1,0 +1,58 @@
+{
+    "name": "Streamlit LLM Testing Playground",
+    "creator": "DaniyalFaraz2003",
+    "slug": "streamlit-llm-testing-playground",
+    "repo": "https://github.com/Open-Starter-Kits/streamlit-llm-testing-playground",
+    "type": "ai",
+    "stack": {
+        "language": [
+            "python"
+        ],
+        "frontend": [
+            "streamlit"
+        ],
+        "backend": [
+            "langchain"
+        ],
+        "infrastructure": [
+            "docker",
+            "uv"
+        ]
+    },
+    "features": [
+        "chatbot-style interface",
+        "pluggable llm providers",
+        "support for openai compatible apis",
+        "local llm support",
+        "prompt testing",
+        "system and user prompt separation",
+        "conversation history",
+        "temperature and max token controls",
+        "model switching at runtime",
+        "streaming responses"
+    ],
+    "difficulty": "intermediate",
+    "status": "active",
+    "license": "MIT",
+    "maintainers": [
+        "DaniyalFaraz2003"
+    ],
+    "created_at": "2026-01-21",
+    "last_updated": "2026-01-21",
+    "description": "A Streamlit-based playground for testing, comparing, and debugging LLMs via API or local models using a clean chatbot interface.",
+    "homepage": "https://github.com/Open-Starter-Kits/streamlit-llm-testing-playground",
+    "tags": [
+        "ai",
+        "llm",
+        "streamlit",
+        "chatbot",
+        "prompt-engineering",
+        "openai",
+        "local-llm",
+        "testing"
+    ],
+    "requirements": {
+        "python": ">=3.10",
+        "docker": true
+    }
+}
